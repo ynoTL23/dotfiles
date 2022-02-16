@@ -1,3 +1,7 @@
 [user]
 	name = ynoTL
 	email = tonylu23@gmail.com
+[alias]
+  adog = log --all --decorate --oneline --graph
+[core]
+	editor = vim
