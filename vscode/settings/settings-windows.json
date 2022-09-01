@@ -1,0 +1,91 @@
+{
+  // Fonts and Tabs
+  "editor.fontFamily": "'Source Code Pro', 'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05'",
+  "editor.fontSize": 12,
+  "editor.tabSize": 2,
+
+  // Integrated Terminal
+  "terminal.integrated.fontFamily": "'Source Code Pro', 'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace",
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+
+  // Editor
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.snippetSuggestions": "top",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.tabCompletion": "on",
+  "editor.suggestSelection": "recentlyUsed",
+  "editor.cursorStyle": "line",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.suggest.showStatusBar": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.minimap.maxColumn": 100,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 300,
+  "files.trimTrailingWhitespace": true,
+  "editor.suggest.preview": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.tree.renderIndentGuides": "always",
+  "files.exclude": {
+    "node_modules": true
+  },
+
+  // HTML
+  "html.format.indentInnerHtml": true,
+
+  // Javascript Configs
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+  "diffEditor.renderSideBySide": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.inlayHints.parameterNames.enabled": "all",
+
+  // TypeScript Configs
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+
+  // Emmet
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+
+  // Prettier
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.bracketSpacing": true,
+  "prettier.bracketSameLine": true,
+  "prettier.arrowParens": "avoid",
+  "prettier.endOfLine": "lf",
+  "prettier.printWidth": 100,
+
+  // Tailwind
+  "tailwindCSS.emmetCompletions": true,
+
+  // Other
+  "telemetry.telemetryLevel": "off",
+  "window.commandCenter": true,
+  "workbench.layoutControl.enabled": false
+}
