@@ -1,0 +1,107 @@
+{
+  // Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "Log to console": {
+    "prefix": "log",
+    "body": ["console.log($1);"],
+    "description": "Log output to console"
+  },
+  "Create an arrow function": {
+    "prefix": "arrow",
+    "body": ["const ${1:myFunction} = ($2) => {", "\t$3", "}"]
+  },
+  "Create a command handler": {
+    "prefix": "cmd",
+    "body": [
+      "module.exports = {",
+      "\tcommands: ['$1'],",
+      "\texpectedArgs: '$2',",
+      "\tpermissionError: '$3',",
+      "\tminArgs: ${4:0},",
+      "\tmaxArgs: ${5:null},",
+      "\tpermissions: [$6],",
+      "\trequiredRoles: [$7],",
+      "\trun: (message, args, text) => {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ]
+  },
+
+  // Karma Jasmine Testing
+  // > Spec
+  "Create describe block": {
+    "description": "Creates a describe block",
+    "prefix": ["desc", "describe"],
+    "body": ["describe('$1', function () {", "\t$2", "});"]
+  },
+  "Create it block": {
+    "description": "Creates an it block",
+    "prefix": "it",
+    "body": ["it('$1:Should', function () {", "\t$2", "});"]
+  },
+  "Create a beforeAll block": {
+    "description": "Runs code before all tests",
+    "prefix": ["beforeAll", "ba"],
+    "body": ["beforeAll(function () {", "\t$1", "});"]
+  },
+  "Create beforeEach block": {
+    "description": "Runs code before each test",
+    "prefix": ["be", "beforeEach"],
+    "body": ["beforeEach(function () {", "\t$1", "});"]
+  },
+  "Create a afterAll block": {
+    "description": "Runs code after all tests",
+    "prefix": ["afterAll", "ba"],
+    "body": ["afterAll(function () {", "\t$1", "});"]
+  },
+  "Create afterEach block": {
+    "prefix": ["ae", "aea", "afterEach"],
+    "body": ["afterEach(function () {", "\t$1", "});"]
+  },
+  "Create an it block within a describe block": {
+    "prefix": "describeit",
+    "body": ["describe('$1', function() {", "\tit('$2', function() {", "\t\t$0", "\t});", "});"],
+    "description": "Creates it block within a describe block"
+  },
+
+  // > Suite setup
+  "Create a sandbox stub": {
+    "prefix": "sandboxstub",
+    "body": ["${1:sandbox}.stub($2, '$3}');"],
+    "description": "Stub a function to a sandbox"
+  },
+
+  // > Expectations
+  "Create an expect": {
+    "prefix": ["expect", "exp"],
+    "body": ["expect($1)$0;"],
+    "description": "Makes an expect"
+  },
+  "Create an expect to be": {
+    "prefix": ["expecttobe", "exptobe", "exptb", "etb"],
+    "body": ["expect($1).to.be$0;"],
+    "description": "Makes an expect to be"
+  },
+  "Create an expect to be defined": {
+    "prefix": ["expecttobedefined", "exptobedefined", "exptbdef", "etbdef", "exptobedefined"],
+    "body": ["expect($1).to.be.defined;$0"],
+    "description": "Makes an expect to be defined"
+  },
+  "Create an expect to be undefined": {
+    "prefix": ["expecttobeundefined", "exptobeundefined", "exptbundef", "etbundef"],
+    "body": ["expect($1).to.be.undefined;$0"],
+    "description": "Makes an expect to be undefined"
+  }
+}
