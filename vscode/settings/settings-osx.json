@@ -1,11 +1,13 @@
 {
   // Fonts and Tabs
-  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "SFMono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 12,
   "editor.tabSize": 2,
 
   // Themes
-  "workbench.colorTheme": "GitHub Dark",
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "catppuccin.workbenchMode": "flat",
+  "catppuccin.extraBordersEnabled": true,
 
   // Integrated Terminal
   "terminal.integrated.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
@@ -16,6 +18,10 @@
   // Editor
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true
+  },
   "editor.snippetSuggestions": "top",
   "editor.quickSuggestions": {
     "other": true,
@@ -25,15 +31,16 @@
   "editor.tabCompletion": "on",
   "editor.suggestSelection": "recentlyUsed",
   "editor.cursorStyle": "line",
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.suggest.showStatusBar": true,
   "editor.suggest.insertMode": "replace",
   "editor.minimap.maxColumn": 100,
   "editor.suggest.preview": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
-  "editor.experimental.stickyScroll.enabled": true,
+  "editor.autoIndent": "full",
   "diffEditor.renderSideBySide": true,
+  "editor.stickyScroll.enabled": true,
 
   "workbench.tree.renderIndentGuides": "always",
   "files.trimTrailingWhitespace": true,
@@ -91,15 +98,29 @@
   "prettier.useEditorConfig": true,
   "prettier.tabWidth": 2,
   "prettier.useTabs": false,
-  "prettier.semi": false,
-  "prettier.singleQuote": false,
-  "prettier.jsxSingleQuote": false,
-  "prettier.trailingComma": "none",
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.trailingComma": "es5",
   "prettier.bracketSpacing": true,
   "prettier.bracketSameLine": true,
   "prettier.arrowParens": "avoid",
   "prettier.endOfLine": "lf",
   "prettier.printWidth": 100,
+
+  // ESLint
+  "eslint.enable": true,
+
+  // Jest
+  "jest.autoRun": "off",
+
+  // GitLens
+  "gitlens.views.commitDetails.files.layout": "tree",
+  "gitlens.graph.experimental.minimap.enabled": true,
+  "gitlens.graph.dimMergeCommits": true,
+
+  "totalTypeScript.hideAllTips": true,
+  "totalTypeScript.showTLDRTranslation": true,
 
   // Other
   "telemetry.telemetryLevel": "off",
@@ -108,5 +129,6 @@
   "update.mode": "none",
   "extensions.autoCheckUpdates": true,
   "extensions.autoUpdate": false,
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "totalTypeScript.hideBasicTips": false
 }
