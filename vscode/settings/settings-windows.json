@@ -24,7 +24,7 @@
   "editor.tabCompletion": "on",
   "editor.suggestSelection": "recentlyUsed",
   "editor.cursorStyle": "line",
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.suggest.showStatusBar": true,
   "editor.suggest.insertMode": "replace",
   "editor.minimap.maxColumn": 100,
@@ -34,8 +34,8 @@
   "editor.suggest.preview": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
-  "workbench.colorTheme": "GitHub Dark",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "catppuccin-mocha",
   "workbench.tree.renderIndentGuides": "always",
   "files.exclude": {
     "node_modules": true
@@ -54,7 +54,7 @@
   "javascript.inlayHints.parameterNames.enabled": "all",
 
   // TypeScript Configs
-  "typescript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "double",
   "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
   "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
@@ -71,10 +71,10 @@
   // Prettier
   "prettier.tabWidth": 2,
   "prettier.useTabs": false,
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
-  "prettier.jsxSingleQuote": true,
-  "prettier.trailingComma": "none",
+  "prettier.semi": true,
+  "prettier.singleQuote": false,
+  "prettier.jsxSingleQuote": false,
+  "prettier.trailingComma": "all",
   "prettier.bracketSpacing": true,
   "prettier.bracketSameLine": true,
   "prettier.arrowParens": "avoid",
