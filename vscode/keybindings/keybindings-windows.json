@@ -1,10 +1,36 @@
+// Place your key bindings in this file to override the defaults
 [
-  // New binds
+  /** +++++ NEW BINDS +++++ */
+
+  // >>>>> TEXT MANIPULATION
+  {
+    "key": "ctrl+shift+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
   {
     "key": "ctrl+d",
     "command": "editor.action.deleteLines",
     "when": "textInputFocus && !editorReadonly"
   },
+  {
+    "key": "ctrl+alt+down",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+up",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    // join multiple lines together
+    "key": "ctrl+shift+j",
+    "command": "editor.action.joinLines",
+    "when": "editorTextFocus"
+  },
+
+  // >>>>> TAB NAVIGATION
   {
     "key": "ctrl+1",
     "command": "workbench.action.openEditorAtIndex1"
@@ -42,10 +68,6 @@
     "command": "workbench.action.openEditorAtIndex9"
   },
   {
-    "key": "ctrl+0",
-    "command": "workbench.action.zoomReset"
-  },
-  {
     "key": "ctrl+tab",
     "command": "workbench.action.nextEditorInGroup"
   },
@@ -53,7 +75,39 @@
     "key": "ctrl+shift+tab",
     "command": "workbench.action.previousEditorInGroup"
   },
-  // Unbinds
+
+  // >>>>> ZOOM LEVELS
+  {
+    "key": "ctrl+=",
+    "command": "editor.action.fontZoomIn"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "editor.action.fontZoomOut"
+  },
+  {
+    "key": "ctrl+shift+=",
+    "command": "workbench.action.zoomIn"
+  },
+  {
+    "key": "ctrl+shift+-",
+    "command": "workbench.action.zoomOut"
+  },
+  {
+    "key": "ctrl+0",
+    "command": "editor.action.fontZoomReset"
+  },
+  {
+    "key": "ctrl+shift+0",
+    "command": "workbench.action.zoomReset"
+  },
+
+  {
+    "key": "ctrl+,",
+    "command": "workbench.action.openSettingsJson"
+  },
+
+  /** ----- UNBINDS ----- */
   {
     "key": "ctrl+d",
     "command": "-editor.action.addSelectionToNextFindMatch",
@@ -65,56 +119,54 @@
     "when": "textInputFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+pageup",
-    "command": "-workbench.action.previousEditor"
-  },
-  {
-    "key": "ctrl+pagedown",
-    "command": "-workbench.action.nextEditor"
+    "key": "ctrl+tab",
+    "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+    "when": "!activeEditorGroupEmpty"
   },
   {
     "key": "ctrl+shift+tab",
-    "command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker"
+    "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+    "when": "!activeEditorGroupEmpty"
   },
   {
-    "key": "ctrl+shift+tab",
-    "command": "-workbench.action.openPreviousRecentlyUsedEditorInGroup"
-  },
-  {
-    "key": "alt+1",
+    "key": "ctrl+1",
     "command": "-workbench.action.openEditorAtIndex1"
   },
   {
-    "key": "alt+2",
+    "key": "ctrl+2",
     "command": "-workbench.action.openEditorAtIndex2"
   },
   {
-    "key": "alt+3",
+    "key": "ctrl+3",
     "command": "-workbench.action.openEditorAtIndex3"
   },
   {
-    "key": "alt+4",
+    "key": "ctrl+4",
     "command": "-workbench.action.openEditorAtIndex4"
   },
   {
-    "key": "alt+5",
+    "key": "ctrl+5",
     "command": "-workbench.action.openEditorAtIndex5"
   },
   {
-    "key": "alt+6",
+    "key": "ctrl+6",
     "command": "-workbench.action.openEditorAtIndex6"
   },
   {
-    "key": "alt+7",
+    "key": "ctrl+7",
     "command": "-workbench.action.openEditorAtIndex7"
   },
   {
-    "key": "alt+8",
+    "key": "ctrl+8",
     "command": "-workbench.action.openEditorAtIndex8"
   },
   {
-    "key": "alt+9",
+    "key": "ctrl+9",
     "command": "-workbench.action.openEditorAtIndex9"
+  },
+  {
+    "key": "ctrl+numpad0",
+    "command": "-workbench.action.zoomReset"
   },
   {
     "key": "ctrl+numpad_add",
@@ -125,44 +177,43 @@
     "command": "-workbench.action.zoomIn"
   },
   {
-    "key": "ctrl+shift+-",
-    "command": "-workbench.action.zoomOut"
+    "key": "ctrl+=",
+    "command": "-workbench.action.zoomIn"
   },
   {
     "key": "ctrl+numpad_subtract",
     "command": "-workbench.action.zoomOut"
   },
   {
-    "key": "ctrl+numpad0",
-    "command": "-workbench.action.zoomReset"
-  },
-  {
-    "key": "ctrl+shift+=",
-    "command": "editor.action.fontZoomIn"
-  },
-  {
     "key": "ctrl+shift+-",
-    "command": "editor.action.fontZoomOut"
+    "command": "-workbench.action.zoomOut"
   },
   {
-    "key": "ctrl+0",
-    "command": "editor.action.fontZoomReset"
-  },
-  {
-    "key": "ctrl+0",
-    "command": "-workbench.action.focusSideBar"
-  },
-  {
-    "key": "ctrl+shift+d",
-    "command": "-workbench.view.debug",
-    "when": "viewContainer.workbench.view.debug.enabled"
-  },
-  {
-    "key": "ctrl+shift+d",
-    "command": "editor.action.addSelectionToNextFindMatch"
+    "key": "ctrl+-",
+    "command": "-workbench.action.zoomOut"
   },
   {
     "key": "ctrl+,",
-    "command": "workbench.action.openSettingsJson"
+    "command": "-workbench.action.openSettings"
+  },
+  {
+    "key": "ctrl+alt+down",
+    "command": "-workbench.action.terminal.resizePaneDown",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+alt+left",
+    "command": "-workbench.action.terminal.resizePaneLeft",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "-workbench.action.terminal.resizePaneRight",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+alt+up",
+    "command": "-workbench.action.terminal.resizePaneUp",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
   }
 ]

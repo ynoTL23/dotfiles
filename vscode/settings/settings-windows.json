@@ -5,85 +5,147 @@
   "editor.fontSize": 12,
   "editor.tabSize": 2,
 
+  // Themes
+  "catppuccin.extraBordersEnabled": true,
+  "catppuccin.workbenchMode": "flat",
+  "workbench.colorTheme": "Catppuccin Macchiato",
+
   // Integrated Terminal
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.fontFamily": "'Source Code Pro', 'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace",
   "terminal.integrated.fontSize": 12,
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.stickyScroll.enabled": true,
 
   // Editor
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": true,
+  "editor.autoIndent": "full",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.organizeImports": "never"
+  },
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "line",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.snippetSuggestions": "top",
-  "editor.quickSuggestions": {    "other": true,    "comments": false,    "strings": false  },
-  "editor.tabCompletion": "on",
-  "editor.suggestSelection": "recentlyUsed",
-  "editor.cursorStyle": "line",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.suggest.showStatusBar": true,
-  "editor.suggest.insertMode": "replace",
-  "editor.minimap.maxColumn": 100,
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 300,
-  "files.trimTrailingWhitespace": true,
-  "editor.suggest.preview": true,
-  "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
-  "workbench.colorTheme": "Catppuccin Mocha",
-  "workbench.iconTheme": "catppuccin-mocha",
-  "workbench.tree.renderIndentGuides": "always",
+  "editor.minimap.maxColumn": 100,
+  "editor.quickSuggestions": {
+    "comments": false,
+    "other": true,
+    "strings": false
+  },
+  "editor.snippetSuggestions": "top",
   "editor.stickyScroll.enabled": true,
-  
+  "editor.suggest.insertMode": "replace",
+  "editor.suggest.preview": true,
+  "editor.suggest.showStatusBar": true,
+  "editor.suggestSelection": "recentlyUsed",
+  "editor.tabCompletion": "on",
   "files.exclude": {
     "node_modules": true
   },
+  "files.trimTrailingWhitespace": true,
+  "workbench.tree.enableStickyScroll": true,
+  "workbench.tree.renderIndentGuides": "always",
 
   // HTML
+  "html.autoClosingTags": true,
+  "html.autoCreateQuotes": true,
+  "html.completion.attributeDefaultValue": "doublequotes",
+  "html.format.contentUnformatted": "pre,code,textarea",
+  "html.format.enable": true,
+  "html.format.indentHandlebars": true,
   "html.format.indentInnerHtml": true,
+  "html.format.templating": true,
+  "html.hover.documentation": true,
+  "html.hover.references": true,
 
   // Javascript Configs
-  "javascript.preferences.quoteStyle": "single",
-  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.autoClosingTags": true,
+  "javascript.format.enable": true,
   "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
   "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
-  "diffEditor.renderSideBySide": true,
-  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.format.semicolons": "insert",
   "javascript.inlayHints.parameterNames.enabled": "all",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.quoteStyle": "double",
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.suggest.enabled": true,
+  "javascript.suggestionActions.enabled": true,
 
   // TypeScript Configs
-  "typescript.preferences.quoteStyle": "double",
-  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.format.enable": true,
   "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
   "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
-  "typescript.suggest.completeFunctionCalls": true,
   "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.quoteStyle": "double",
+  "typescript.preferences.quoteStyle": "double",
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.enabled": true,
 
   // Emmet
-  "emmet.showExpandedAbbreviation": "always",
-  "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.triggerExpansionOnTab": true,
 
   // Prettier
-  "prettier.tabWidth": 2,
-  "prettier.useTabs": false,
-  "prettier.semi": true,
-  "prettier.singleQuote": false,
-  "prettier.jsxSingleQuote": false,
-  "prettier.trailingComma": "all",
-  "prettier.bracketSpacing": true,
-  "prettier.bracketSameLine": true,
   "prettier.arrowParens": "avoid",
+  "prettier.bracketSameLine": true,
+  "prettier.bracketSpacing": true,
+  "prettier.configPath": "prettier.config.js",
+  "prettier.enable": true,
   "prettier.endOfLine": "lf",
+  "prettier.jsxSingleQuote": true,
   "prettier.printWidth": 100,
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "es5",
+  "prettier.useEditorConfig": true,
+  "prettier.useTabs": false,
+
+  // ESLint
+  "eslint.codeActionsOnSave.mode": "all",
+  "eslint.enable": true,
+  "eslint.format.enable": true,
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx"
+    ]
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
 
   // Tailwind
   "tailwindCSS.emmetCompletions": true,
 
+  // GitLens
+  "gitlens.currentLine.format": "${author, }${agoOrDate}${' via 'pullRequest}${ • message|75?}",
+  "gitlens.graph.dimMergeCommits": true,
+  "gitlens.graph.layout": "editor",
+  "gitlens.graph.minimap.enabled": true,
+  "gitlens.views.commitDetails.files.layout": "tree",
+
   // Other
   "telemetry.telemetryLevel": "off",
+  "window.titleBarStyle": "custom", // needed for below #window.commandCenter#
   "window.commandCenter": true,
-  "workbench.layoutControl.enabled": false
+  "update.mode": "none",
+  "extensions.autoUpdate": false,
+  "extensions.autoCheckUpdates": true
 }

@@ -5,130 +5,161 @@
   "editor.tabSize": 2,
 
   // Themes
-  "workbench.colorTheme": "Catppuccin Macchiato",
-  "catppuccin.workbenchMode": "flat",
   "catppuccin.extraBordersEnabled": true,
+  "catppuccin.workbenchMode": "flat",
+  "workbench.colorTheme": "Catppuccin Macchiato",
 
   // Integrated Terminal
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
   "terminal.integrated.fontSize": 12,
-  "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.stickyScroll.enabled": true,
 
   // Editor
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": true,
+  "editor.autoIndent": "full",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.organizeImports": "never"
+  },
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "line",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.organizeImports": true
-  },
-  "editor.snippetSuggestions": "top",
+  "editor.guides.bracketPairs": "active",
+  "editor.minimap.maxColumn": 100,
   "editor.quickSuggestions": {
-    "other": true,
     "comments": false,
+    "other": true,
     "strings": false
   },
-  "editor.tabCompletion": "on",
-  "editor.suggestSelection": "recentlyUsed",
-  "editor.cursorStyle": "line",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.suggest.showStatusBar": true,
-  "editor.suggest.insertMode": "replace",
-  "editor.minimap.maxColumn": 100,
-  "editor.suggest.preview": true,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active",
-  "editor.autoIndent": "full",
-  "diffEditor.renderSideBySide": true,
+  "editor.snippetSuggestions": "top",
   "editor.stickyScroll.enabled": true,
-
-  "workbench.tree.renderIndentGuides": "always",
-  "files.trimTrailingWhitespace": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.suggest.preview": true,
+  "editor.suggest.showStatusBar": true,
+  "editor.suggestSelection": "recentlyUsed",
+  "editor.tabCompletion": "on",
   "files.exclude": {
-    "node_modules": true
+    "__mocks__/**": false,
+    "__tests__/**": false,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.vscode": true,
+    "**/Thumbs.db": true,
+    "local/**": true,
+    "udf/**": true,
+    "dist/**": false,
+    "node_modules/**": false,
+    "node_modules/[^@]*/**": true,
+    "node_modules/@[^w]*/**": true,
+    "node_modules/@web[^c]*/**": true,
+    "node_modules/@webc[^h]*/**": true,
+    "node_modules/@webchanplatform/**": false
   },
+  "files.trimTrailingWhitespace": true,
+  "workbench.tree.enableStickyScroll": true,
+  "workbench.tree.renderIndentGuides": "always",
 
   // HTML
-  "html.format.enable": true,
-  "html.format.indentInnerHtml": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
   "html.autoClosingTags": true,
   "html.autoCreateQuotes": true,
   "html.completion.attributeDefaultValue": "doublequotes",
   "html.format.contentUnformatted": "pre,code,textarea",
+  "html.format.enable": true,
   "html.format.indentHandlebars": true,
+  "html.format.indentInnerHtml": true,
   "html.format.templating": true,
   "html.hover.documentation": true,
   "html.hover.references": true,
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
 
   // Javascript Configs
-  "javascript.format.enable": true,
-  "javascript.suggest.enabled": true,
-  "javascript.preferences.quoteStyle": "double",
-  "javascript.format.semicolons": "insert",
   "javascript.autoClosingTags": true,
-  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.format.enable": true,
   "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
   "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
-  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.format.semicolons": "insert",
   "javascript.inlayHints.parameterNames.enabled": "all",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.quoteStyle": "double",
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.suggest.enabled": true,
   "javascript.suggestionActions.enabled": true,
 
   // TypeScript Configs
   "typescript.format.enable": true,
-  "typescript.suggest.enabled": true,
-  "typescript.preferences.quoteStyle": "double",
-  "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
   "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
-  "typescript.suggest.completeFunctionCalls": true,
   "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.quoteStyle": "double",
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.enabled": true,
 
   // Emmet
-  "emmet.showExpandedAbbreviation": "always",
-  "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.triggerExpansionOnTab": true,
 
   // Prettier
+  "prettier.arrowParens": "avoid",
+  "prettier.bracketSameLine": true,
+  "prettier.bracketSpacing": true,
+  "prettier.configPath": "prettier.config.js",
   "prettier.enable": true,
-  "prettier.useEditorConfig": true,
-  "prettier.tabWidth": 2,
-  "prettier.useTabs": false,
+  "prettier.endOfLine": "lf",
+  "prettier.jsxSingleQuote": true,
+  "prettier.printWidth": 100,
   "prettier.semi": true,
   "prettier.singleQuote": true,
-  "prettier.jsxSingleQuote": true,
+  "prettier.tabWidth": 2,
   "prettier.trailingComma": "es5",
-  "prettier.bracketSpacing": true,
-  "prettier.bracketSameLine": true,
-  "prettier.arrowParens": "avoid",
-  "prettier.endOfLine": "lf",
-  "prettier.printWidth": 100,
+  "prettier.useEditorConfig": true,
+  "prettier.useTabs": false,
 
   // ESLint
+  "eslint.codeActionsOnSave.mode": "all",
   "eslint.enable": true,
+  "eslint.format.enable": true,
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx"
+    ]
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
 
   // Jest
-  "jest.autoRun": "off",
+  "jest.runMode": "on-demand",
 
   // GitLens
-  "gitlens.views.commitDetails.files.layout": "tree",
-  "gitlens.graph.experimental.minimap.enabled": true,
+  "gitlens.currentLine.format": "${author, }${agoOrDate}${' via 'pullRequest}${ • message|75?}",
   "gitlens.graph.dimMergeCommits": true,
-
-  "totalTypeScript.hideAllTips": true,
-  "totalTypeScript.showTLDRTranslation": true,
+  "gitlens.graph.layout": "editor",
+  "gitlens.graph.minimap.enabled": true,
+  "gitlens.views.commitDetails.files.layout": "tree",
 
   // Other
   "telemetry.telemetryLevel": "off",
+  "window.titleBarStyle": "custom", // needed for below #window.commandCenter#
   "window.commandCenter": true,
-  "workbench.layoutControl.enabled": false,
   "update.mode": "none",
-  "extensions.autoCheckUpdates": true,
   "extensions.autoUpdate": false,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "totalTypeScript.hideBasicTips": false
+  "extensions.autoCheckUpdates": true
 }

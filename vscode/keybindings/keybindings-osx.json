@@ -23,6 +23,12 @@
     "command": "editor.action.insertCursorAbove",
     "when": "editorTextFocus"
   },
+  {
+    // join multiple lines together
+    "key": "cmd+shift+j",
+    "command": "editor.action.joinLines",
+    "when": "editorTextFocus"
+  },
 
   // >>>>> TAB NAVIGATION
   {
@@ -96,7 +102,6 @@
     "command": "workbench.action.zoomReset"
   },
 
-  // >>>>> ZOOM LEVELS
   {
     "key": "cmd+,",
     "command": "workbench.action.openSettingsJson"
