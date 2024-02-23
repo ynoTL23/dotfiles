@@ -83,8 +83,6 @@
   "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
   "typescript.inlayHints.parameterNames.enabled": "all",
   "typescript.preferences.importModuleSpecifier": "relative",
-  "typescript.preferences.importModuleSpecifier": "relative",
-  "typescript.preferences.quoteStyle": "double",
   "typescript.preferences.quoteStyle": "double",
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.suggest.enabled": true,
