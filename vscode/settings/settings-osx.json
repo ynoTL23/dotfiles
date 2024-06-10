@@ -15,10 +15,6 @@
   "terminal.integrated.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.stickyScroll.enabled": true,
-
-  // Editor
-  "diffEditor.ignoreTrimWhitespace": false,
-  "diffEditor.renderSideBySide": true,
   "editor.autoIndent": "full",
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
@@ -51,16 +47,13 @@
     "**/.hg": true,
     "**/.vscode": true,
     "**/Thumbs.db": true,
-    "local/**": true,
+    "local/**": false,
     "udf/**": true,
     "dist/**": false,
-    "node_modules/**": false,
-    "node_modules/[^@]*/**": true,
-    "node_modules/@[^w]*/**": true,
-    "node_modules/@web[^c]*/**": true,
-    "node_modules/@webc[^h]*/**": true,
-    "node_modules/@webchanplatform/**": false
+    "node_modules/**": false
   },
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "diffEditor.experimental.showMoves": true,
   "files.trimTrailingWhitespace": true,
   "workbench.tree.enableStickyScroll": true,
   "workbench.tree.renderIndentGuides": "always",
@@ -98,7 +91,8 @@
   "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
   "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
   "typescript.inlayHints.parameterNames.enabled": "all",
-  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
   "typescript.preferences.quoteStyle": "double",
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.suggest.enabled": true,
@@ -114,7 +108,7 @@
   "prettier.arrowParens": "avoid",
   "prettier.bracketSameLine": true,
   "prettier.bracketSpacing": true,
-  "prettier.configPath": "prettier.config.js",
+  // "prettier.configPath": "prettier.config.js",
   "prettier.enable": true,
   "prettier.endOfLine": "lf",
   "prettier.jsxSingleQuote": true,
@@ -131,19 +125,9 @@
   "eslint.enable": true,
   "eslint.format.enable": true,
   "eslint.options": {
-    "extensions": [
-      ".js",
-      ".jsx",
-      ".ts",
-      ".tsx"
-    ]
+    "extensions": [".js", ".jsx", ".ts", ".tsx"]
   },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 
   // Jest
   "jest.runMode": "on-demand",
@@ -154,6 +138,7 @@
   "gitlens.graph.layout": "editor",
   "gitlens.graph.minimap.enabled": true,
   "gitlens.views.commitDetails.files.layout": "tree",
+  "gitlens.views.commits.files.layout": "tree",
 
   // Other
   "telemetry.telemetryLevel": "off",
