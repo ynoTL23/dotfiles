@@ -7,18 +7,20 @@
   // Themes
   "catppuccin.extraBordersEnabled": true,
   "catppuccin.workbenchMode": "flat",
-  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.colorTheme": "Catppuccin Mocha",
 
   // Integrated Terminal
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
   "terminal.integrated.fontSize": 12,
-  "terminal.integrated.stickyScroll.enabled": true,
+
+  "editor.lineNumbers": "relative",
   "editor.autoIndent": "full",
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always",
+    "source.fixAll": "explicit",
     "source.organizeImports": "never"
   },
   "editor.cursorSmoothCaretAnimation": "on",
@@ -50,13 +52,40 @@
     "local/**": false,
     "udf/**": true,
     "dist/**": false,
-    "node_modules/**": false
+    "node_modules/**": false,
+    "node_modules/[^@]*/**": true,
+    "node_modules/@[^w]*/**": true
+ },
+  "files.readonlyInclude": {
+    "node_modules/**": true
   },
   "diffEditor.hideUnchangedRegions.enabled": true,
+  "diffEditor.renderGutterMenu": true,
   "diffEditor.experimental.showMoves": true,
+  "diffEditor.ignoreTrimWhitespace": false,
   "files.trimTrailingWhitespace": true,
   "workbench.tree.enableStickyScroll": true,
   "workbench.tree.renderIndentGuides": "always",
+  "search.defaultViewMode": "tree",
+  "search.showLineNumbers": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    // test dir
+    "/test/**": true,
+    // All test files
+    "**/*.test.ts": true,
+    "**/*.test.tsx": true,
+    // Package-lock file
+    "**/package-lock.json": true,
+    // Git folder
+    "**/.git": true,
+    // Coverage folder
+    "**/coverage": true,
+    // Dist folder
+    "**/dist": true
+  },
 
   // HTML
   "[html]": {
@@ -73,14 +102,14 @@
   "html.hover.documentation": true,
   "html.hover.references": true,
 
-  // Javascript Configs
+  // JavaScript Configs
   "javascript.autoClosingTags": true,
   "javascript.format.enable": true,
   "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
   "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
   "javascript.format.semicolons": "insert",
   "javascript.inlayHints.parameterNames.enabled": "all",
-  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
   "javascript.preferences.quoteStyle": "double",
   "javascript.suggest.completeFunctionCalls": true,
   "javascript.suggest.enabled": true,
@@ -108,7 +137,7 @@
   "prettier.arrowParens": "avoid",
   "prettier.bracketSameLine": true,
   "prettier.bracketSpacing": true,
-  // "prettier.configPath": "prettier.config.js",
+  "prettier.configPath": "./prettier.config.js",
   "prettier.enable": true,
   "prettier.endOfLine": "lf",
   "prettier.jsxSingleQuote": true,
@@ -133,6 +162,9 @@
   "jest.runMode": "on-demand",
 
   // GitLens
+  "git.autofetch": true,
+  "git.decorations.enabled": true,
+
   "gitlens.currentLine.format": "${author, }${agoOrDate}${' via 'pullRequest}${ • message|75?}",
   "gitlens.graph.dimMergeCommits": true,
   "gitlens.graph.layout": "editor",
