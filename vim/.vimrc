@@ -127,6 +127,22 @@ map <leader>t<leader> :tabnext<cr>
 " Open a new tab with current buffer's path
 map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
 
+" Replace highlighted text in Visual mode
+" 1. Highlight text to replace in Visual mode
+" 2. Enter replacement text into prompt
+" 3. Press Enter
+" 4. Press y/n/l/q/^E/^Y
+"      y  - Yes
+"      n  - No
+"      q  - quit edit
+"      l  - end edits
+"      ^E - scroll up
+"      ^Y - scroll down
+
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
+vmap * y:let @/ = @"<CR>
+
 """"""""""
 " Helper functions
 """"""""""
