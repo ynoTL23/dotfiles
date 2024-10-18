@@ -123,7 +123,7 @@ export LANG=en_US.UTF-8
 function git-blame-someone-else() {
   if [ $# -ne 2 ]; then
     >&2 echo "Usage: $0 <author> <commit>"
-    exit 1
+    return
   fi
 
   AUTHOR=$1
